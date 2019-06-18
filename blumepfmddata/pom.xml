@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.blume</groupId>
+	<groupId>com.blumeglobal</groupId>
 	<artifactId>blumepfmddata</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -29,11 +29,6 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 			<version>1.18.8</version>
-		</dependency>
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20180813</version>
 		</dependency>		
 		<dependency>
 			<groupId>junit</groupId>
@@ -41,6 +36,11 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+	        <groupId>org.mapstruct</groupId>
+	        <artifactId>mapstruct</artifactId>
+	        <version>${org.mapstruct.version}</version>
+	    </dependency>
 		 <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
@@ -50,27 +50,18 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-			<groupId>com.blume</groupId>
+			<groupId>com.blumeglobal</groupId>
 			<artifactId>blumepfcommon</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>com.blume</groupId>
+			<groupId>com.blumeglobal</groupId>
 			<artifactId>blumepfmdinterfaces</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		</dependency>		
 	</dependencies>
 
-	<build>
-		<!-- <plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
-				</configuration>
-			</plugin>
-		</plugins> -->
+	<build>		
 		<plugins>
 			  <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -116,7 +107,7 @@
                         </goals>
                         <configuration>                           
                             <includes>
-                                <include>com/blume/core/**</include>
+                                <include>com/blumeglobal/core/**</include>
                             </includes>
                         </configuration>
                     </execution>
